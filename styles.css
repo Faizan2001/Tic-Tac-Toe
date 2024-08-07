@@ -1,30 +1,83 @@
+/* General Reset */
 * {
-  margin: 0;
-  padding: 0;
-}
-
-.container {
-  display: flex;
-  flex-direction: column;
-  gap:15px;
-  justify-content: center;
-  align-items: center;
-  height: 100vh; /* Make the container fill the viewport height */
-}
-
-.board {
-  display: grid;
-  grid-template-rows: repeat(3, 100px);
-  grid-template-columns: repeat(3, 100px);
-  gap: 5px;
-}
-
-button {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  /* Container styling */
+  .container {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; /* Make the container fill the viewport height */
+    background-color: #f4f4f9; /* Light background color */
+  }
+  
+  /* Board styling */
+  .board {
+    display: grid;
+    grid-template-rows: repeat(3, 100px);
+    grid-template-columns: repeat(3, 100px);
+    gap: 5px;
+  }
+  
+  /* Button styling */
+  button {
     border-radius: 5px;
-    font: bold;
-}
-
-button.resetButton {
+    font-size: 24px;
+    font-weight: bold;
+    border: 2px solid #333; /* Border color */
+    background-color: #fff; /* Button background color */
+    color: #333; /* Text color */
+    cursor: pointer;
+    transition: all 0.3s ease; /* Smooth transition for all properties */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  /* Button hover effect */
+  button:hover {
+    background-color: #e0e0e0; /* Light gray background on hover */
+    transform: scale(1.05); /* Slightly scale up the button */
+  }
+  
+  /* Button active effect */
+  button:active {
+    background-color: #ccc; /* Darker gray when button is clicked */
+    transform: scale(0.98); /* Slightly scale down the button */
+  }
+  
+  /* Reset button styling */
+  button.resetButton {
     height: 60px;
     width: 200px;
-}
+    background-color: #007bff; /* Primary button color */
+    color: #fff; /* Primary button text color */
+    border: none; /* Remove default border */
+    font-size: 18px;
+  }
+  
+  button.resetButton:hover {
+    background-color: #0056b3; /* Darker blue on hover */
+  }
+  
+  /* Board cell styling */
+  .board button {
+    font-size: 36px; /* Larger font for game marks */
+    font-family: 'Arial', sans-serif; /* Font for game marks */
+    border: 2px solid #ccc; /* Light border for cells */
+    background-color: #fff; /* Cell background color */
+  }
+  
+  .board button.X {
+    color: #f00; /* Red for X */
+  }
+  
+  .board button.O {
+    color: #00f; /* Blue for O */
+  }
+  
